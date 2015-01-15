@@ -51,27 +51,27 @@ public class WordCounterTest {
 	}		
 	
 	
-	@Test(expected=NullPointerException.class)
-	public void testEmptyWordsThrowsNullPointerExceptionOnCount(){
+	@Test(expected=IllegalArgumentException.class)
+	public void testEmptyWordsThrowsIllegalArgumentExceptionOnCount(){
 		WordCounter wordCounter =  new WordCounter();	
         wordCounter.count("");    
 	}
 	
-	@Test(expected=NullPointerException.class)
-	public void testNullValuesThrowsNullPointerExceptionOnCount(){
+	@Test(expected=IllegalArgumentException.class)
+	public void testNullValuesThrowsIllegalArgumentExceptionOnCount(){
 		WordCounter wordCounter =  new WordCounter();	
         wordCounter.count(null);    
 	}
 
-	@Test(expected=NullPointerException.class)
-	public void whenGetCountToEmptyWordThrowsNullPointerException(){
+	@Test(expected=IllegalArgumentException.class)
+	public void whenGetCountToEmptyWordThrowsIllegalArgumentException(){
 		WordCounter wordCounter =  new WordCounter();	
 		wordCounter.getCount("");
 	
 	}
 	
-	@Test(expected=NullPointerException.class)
-	public void whenGetCountToNullVAlueThrowsNullPointerException(){
+	@Test(expected=IllegalArgumentException.class)
+	public void whenGetCountToNullVAlueThrowsIllegalArgumentException(){
 		WordCounter wordCounter =  new WordCounter();	
 		wordCounter.getCount(null);
         

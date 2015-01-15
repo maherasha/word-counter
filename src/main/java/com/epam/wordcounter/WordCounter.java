@@ -13,7 +13,7 @@ public class WordCounter {
 	 */
 	public void count(String word) {
 		if(word == null || word.isEmpty()){
-			throw new NullPointerException();
+			throw new IllegalArgumentException();
 		}
 		
 		
@@ -34,7 +34,7 @@ public class WordCounter {
 	 */
 	public Integer getCount(String word){
 		if(word == null || word.isEmpty()){
-			throw new NullPointerException();
+			throw new IllegalArgumentException();
 		}
 		
 		if(countedWords.get(word) == null){
